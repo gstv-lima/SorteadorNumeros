@@ -4,10 +4,12 @@ function sortear(){
     let numFinal = parseInt(document.getElementById('ate').value);
     
     let sorteados = [];
-    let numero;
 
     for (let i=0 ; i<qtdNum ; i++){
     let numero = seletorAleatorio(numInicial, numFinal);
+        while (sorteados.includes(numero)){
+            numero = seletorAleatorio(numInicial, numFinal);
+        }
         sorteados.push(numero);
     }
     
